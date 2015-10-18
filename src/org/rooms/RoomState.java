@@ -1,6 +1,5 @@
 package org.rooms;
 
-public enum RoomState{
-	PAUSED,PLAYING
+public enum RoomState {
+	PAUSED, PLAYING
 }
-

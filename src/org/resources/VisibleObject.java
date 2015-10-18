@@ -7,42 +7,42 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-public abstract class VisibleObject implements VOb{
-	public boolean dead=false;
-	public float x=0,y=0;
-	public int w=0,h=0;
-	public BufferedImage image=null;
+public abstract class VisibleObject implements VOb {
+	public boolean dead = false;
+	public float x = 0, y = 0;
+	public int w = 0, h = 0;
+	public BufferedImage image = null;
 	public Color color;
-	public float x(){
+	public float x() {
 		return x;
 	}
-	public float y(){
+	public float y() {
 		return y;
 	}
-	public int w(){
+	public int w() {
 		return w;
 	}
-	public int h(){
+	public int h() {
 		return h;
 	}
-	public BufferedImage image(){
+	public BufferedImage image() {
 		return image;
 	}
-	public void draw(Graphics g){
-		if(image==null){
-			if(color==null)return;
+	public void draw(Graphics g) {
+		if (image == null) {
+			if (color == null)
+				return;
 			g.setColor(color);
-			g.fillRect(round(x), round(y), w,h);
-		}
-		else
+			g.fillRect(round(x), round(y), w, h);
+		} else
 			g.drawImage(image, round(x), round(y), null);
 	}
-	public void finalize(){
+	public void finalize() {
 		out.println("VO is dead!");
 	}
-	
+
 }
-interface VOb{
+interface VOb {
 	float x();
 	float y();
 	int w();
