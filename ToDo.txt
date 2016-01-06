@@ -1,5 +1,0 @@
--2 bosses
--center camera
--beware of dogs sign
--water doors
--
